@@ -19,4 +19,8 @@ rm -f /usr/local/bin/ttyd >/dev/null 2>&1 || true
 echo "Remove remote-share-cli..."        
 npm remove -g remote-share-cli >/dev/null 2>&1 || true
 
+# remote-share-cli
+echo "Remove web-search-cli..."        
+rm -f /usr/local/bin/s >/dev/null 2>&1 || true
+
 echo "Done."

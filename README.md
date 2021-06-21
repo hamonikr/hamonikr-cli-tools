@@ -29,6 +29,7 @@ Include packages
 - aria2 (download utility - HTTP/HTTPS, FTP, SFTP, BitTorrent, Metalink)
 - asciinema (Record and share terminal sessions)
 - neofetch (show system infomation)
+- web-search-cli (web search in your terminal)
 
 
 # Install

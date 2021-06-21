@@ -25,6 +25,14 @@ case "$1" in
         echo "Install remote-share-cli..."        
         npm install -g remote-share-cli >/dev/null 2>&1 || true
 
+        # web-search-cli
+        echo "Install web-search-cli..."
+        rm -rf /tmp/s-linux_amd64* || true
+        wget https://github.com/zquestz/s/releases/download/v0.5.15/s-linux_amd64.zip -O /tmp/s-linux_amd64.zip >/dev/null 2>&1 || true
+        unzip /tmp/s-linux_amd64.zip -d /tmp >/dev/null 2>&1 || true
+        sudo cp -af /tmp/s-linux_amd64/s /usr/local/bin/s >/dev/null 2>&1 || true
+        sudo chmod +x /usr/local/bin/s >/dev/null 2>&1 || true
+
         echo "Refresh fc-cache..."        
         fc-cache -v -f >/dev/null 2>&1 || true
 
