@@ -1,0 +1,42 @@
+#!/bin/bash
+
+case "$1" in
+    configure)
+    
+        # starship
+        echo "Install startship..."
+        wget https://starship.rs/install.sh -O /tmp/starship_install.sh >/dev/null 2>&1 || true
+        sh /tmp/starship_install.sh -y >/dev/null 2>&1 || true
+        RUID=$(who | awk 'FNR == 1 {print $1}')
+        echo "# starship" | tee -a /home/${RUID}/.bashrc >/dev/null 2>&1 || true
+        echo "eval \"\$(starship init bash)\"" | tee -a /home/${RUID}/.bashrc >/dev/null 2>&1 || true
+        rm -f /tmp/starship_install.sh
+
+        # lazydocker
+        echo "Install lazydocker..."        
+        curl -s https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash >/dev/null 2>&1 || true
+
+        # ttyd
+        echo "Install ttyd..."        
+        sudo wget https://github.com/tsl0922/ttyd/releases/download/1.6.3/ttyd.i686 -O /usr/local/bin/ttyd >/dev/null 2>&1 || true
+        sudo chmod +x /usr/local/bin/ttyd        
+
+        # remote-share-cli
+        echo "Install remote-share-cli..."        
+        npm install -g remote-share-cli >/dev/null 2>&1 || true
+
+        echo "Refresh fc-cache..."        
+        fc-cache -v -f >/dev/null 2>&1 || true
+
+        echo "Done."                
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac

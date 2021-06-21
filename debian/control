@@ -1,0 +1,30 @@
+Source: hamonikr-cli-tools
+Section: admin
+Priority: optional
+Maintainer: Kevin Kim <root@hamonikr.org>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: hamonikr-cli-tools
+Architecture: all
+Depends: npm
+Recommends: aria2,
+            fonts-naver-d2coding,
+            fsarchiver,
+            glances,
+            hamonikr-ff,
+            htop,
+            icdiff,
+            jq,
+            mc,
+            mtr,
+            ncdu,
+            neofetch,
+            network-manager,
+            speedtest-cli,
+            systemd-tui,
+            tldr,
+            tmux,
+            w3m
+Description: CLI Tools for Terminal
+ Set of packages installed for HamoniKR CLI.

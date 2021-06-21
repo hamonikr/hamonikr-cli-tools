@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# starship
+echo "Remove starship..."        
+RUID=$(who | awk 'FNR == 1 {print $1}')
+sed -i '/# starship/d' /home/${RUID}/.bashrc
+sed -i '/starship init bash/d' /home/${RUID}/.bashrc
+rm -f /usr/local/bin/starship >/dev/null 2>&1 || true
+
+# lazydocker
+echo "Remove lazydocker..."        
+rm -f /usr/local/bin/lazydocker >/dev/null 2>&1 || true
+
+# ttyd
+echo "Remove ttyd..."        
+rm -f /usr/local/bin/ttyd >/dev/null 2>&1 || true
+
+# remote-share-cli
+echo "Remove remote-share-cli..."        
+npm remove -g remote-share-cli >/dev/null 2>&1 || true
+
+echo "Done."
