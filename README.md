@@ -13,23 +13,23 @@ Include packages
 - hamonikr-ff (fzf and bat features)
 - speedtest-cli (network speed benchmark)
 - w3m (terminal web browser)
-- mtr (traceroute)
+- mtr (traceroute) : ex) mtr -t
 - network-manager nmtui (network setting tui)
 - systemd-tui (systemd service management tui)
 - ncdu (disk usage analysis)
 - mc (terminal file manager)
-- tldr (manual for command)
+- tldr (manual for command) : ex) tldr nmap
 - fsarchiver (partition backup and restore)
 - starship (mordern prompt for shell)
 - htop (process viewer)
-- glances (system monitoring tool)
+- glances (system monitoring tool) : ex) glances -w
 - lazydocker (TUI for both docker and docker-compose)
 - tmux (terminal multiplexer)
-- ttyd (Share terminal over the web)
+- ttyd (Share terminal over the web) : ex) ttyd htop
 - aria2 (download utility - HTTP/HTTPS, FTP, SFTP, BitTorrent, Metalink)
 - asciinema (Record and share terminal sessions)
 - neofetch (show system infomation)
-- web-search-cli (web search in your terminal)
+- web-search-cli (web search in your terminal) : ex) s -b w3m -p naver <키워드>
 
 
 # Install
