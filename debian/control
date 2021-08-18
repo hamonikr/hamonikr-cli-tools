@@ -9,6 +9,7 @@ Package: hamonikr-cli-tools
 Architecture: all
 Depends: npm
 Recommends: aria2,
+	    asciinema,
             fonts-naver-d2coding,
             fsarchiver,
             glances,
