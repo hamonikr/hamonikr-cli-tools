@@ -3,22 +3,13 @@
 case "$1" in
     configure)
     
-        # starship
-        echo "Install startship..."
-        wget https://starship.rs/install.sh -O /tmp/starship_install.sh >/dev/null 2>&1 || true
-        sh /tmp/starship_install.sh -y >/dev/null 2>&1 || true
-        RUID=$(who | awk 'FNR == 1 {print $1}')
-        echo "# starship" | tee -a /home/${RUID}/.bashrc >/dev/null 2>&1 || true
-        echo "eval \"\$(starship init bash)\"" | tee -a /home/${RUID}/.bashrc >/dev/null 2>&1 || true
-        rm -f /tmp/starship_install.sh
-
         # lazydocker
         echo "Install lazydocker..."        
         curl -s https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash >/dev/null 2>&1 || true
 
         # ttyd
         echo "Install ttyd..."        
-        sudo wget https://github.com/tsl0922/ttyd/releases/download/1.6.3/ttyd.i686 -O /usr/local/bin/ttyd >/dev/null 2>&1 || true
+        sudo wget https://github.com/tsl0922/ttyd/releases/download/1.7.4/ttyd.i686 -O /usr/local/bin/ttyd >/dev/null 2>&1 || true
         sudo chmod +x /usr/local/bin/ttyd        
 
         # remote-share-cli
@@ -28,7 +19,7 @@ case "$1" in
         # web-search-cli
         echo "Install web-search-cli..."
         rm -rf /tmp/s-linux_amd64* || true
-        wget https://github.com/zquestz/s/releases/download/v0.5.15/s-linux_amd64.zip -O /tmp/s-linux_amd64.zip >/dev/null 2>&1 || true
+        wget https://github.com/zquestz/s/releases/download/v0.6.9/s-linux_amd64.zip -O /tmp/s-linux_amd64.zip >/dev/null 2>&1 || true
         unzip /tmp/s-linux_amd64.zip -d /tmp >/dev/null 2>&1 || true
         sudo cp -af /tmp/s-linux_amd64/s /usr/local/bin/s >/dev/null 2>&1 || true
         sudo chmod +x /usr/local/bin/s >/dev/null 2>&1 || true
