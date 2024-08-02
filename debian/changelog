@@ -1,6 +1,7 @@
 hamonikr-cli-tools (20240802) unstable; urgency=medium
 
   * Release for HamoniKR 8
+   - Add sysz : https://github.com/joehillen/sysz
 
  -- HamoniKR <pkg@hamonikr.org>  Fri, 02 Aug 2024 18:04:21 +0900
 
