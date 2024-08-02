@@ -1,3 +1,9 @@
+hamonikr-cli-tools (20240802) unstable; urgency=medium
+
+  * Release for HamoniKR 8
+
+ -- HamoniKR <pkg@hamonikr.org>  Fri, 02 Aug 2024 18:04:21 +0900
+
 hamonikr-cli-tools (20231004) stable; urgency=medium
 
   * Release for HamoniKR 7.0
