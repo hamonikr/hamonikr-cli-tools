@@ -37,14 +37,14 @@ Include packages
 ## HamoniKR (>= 4.0)
 ```
 sudo apt update
-sudo apt hamonikr-cli-tools
+sudo apt install hamonikr-cli-tools
 ```
 
 ## Ubuntu, LinuxMint (>=Ubuntu 20.04)
 
 ```
 wget -qO- https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
-sudo apt hamonikr-cli-tools
+sudo apt install hamonikr-cli-tools
 ```
 
 # Remove
